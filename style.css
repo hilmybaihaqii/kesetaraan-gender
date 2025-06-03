@@ -28,7 +28,8 @@
     --border-radius-base: 8px;
     --border-radius-large: 12px; /* Radius baru untuk menu mobile */
     --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --transition-menu-mobile: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Transisi baru untuk menu mobile */
+    /* Mengupdate transition-menu-mobile untuk mencerminkan perubahan */
+    --transition-menu-mobile: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s cubic-bezier(0.23, 1, 0.32, 1); 
 }
 
 body.dark-mode {
@@ -185,6 +186,7 @@ body.dark-mode #darkModeToggle .sun-icon { display: none; }
     top: 26px; 
 }
 
+/* Transformasi menjadi 'X' saat active */
 .hamburger-menu.active .hamburger-bar-top {
     transform: translateX(-50%) translateY(8px) rotate(45deg); 
 }
@@ -367,12 +369,12 @@ body.dark-mode .our-projects-highlight {
 .project-preview-item img {
     width: 100%; /* Gambar akan mengisi lebar .project-preview-item */
     max-width: 280px; /* Batas atas ukuran gambar agar tidak terlalu besar di item yang lebar */
-                     /* Sesuaikan nilai ini jika ingin gambar lebih besar atau kecil */
+                       /* Sesuaikan nilai ini jika ingin gambar lebih besar atau kecil */
     height: auto;     /* Menjaga aspek rasio gambar */
     border-radius: var(--border-radius-base);
     margin-bottom: 1.2rem;
     /* object-fit: cover; Dihapus karena height: auto sudah menjaga aspek rasio.
-                       Jika ingin cropping ke aspek rasio tertentu, container image perlu tinggi tetap. */
+                        Jika ingin cropping ke aspek rasio tertentu, container image perlu tinggi tetap. */
 }
 
 
@@ -497,27 +499,27 @@ body.dark-mode .footer-bottom {
         top: var(--navbar-height); 
         left: 0; 
         width: 100%;
-        background-color: rgba(var(--card-bg-color-rgb-light), 0.92); 
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px); 
+        background-color: rgba(var(--card-bg-color-rgb-light), 0.95); /* Sedikit lebih opaque */
+        backdrop-filter: blur(12px); /* Sedikit lebih blur */
+        -webkit-backdrop-filter: blur(12px); 
         border-radius: 0 0 var(--border-radius-large) var(--border-radius-large); 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sedikit perubahan pada shadow */
+        overflow-y: auto;
+        max-height: calc(100vh - var(--navbar-height));
+        z-index: 999;
         
+        transform: translateY(-110%); /* Lebih jauh di atas */
+        opacity: 0; 
+        visibility: hidden;
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         flex-direction: column; 
         align-items: stretch; 
         padding: 0; 
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
-        
-        transform: translateY(-100%); 
-        opacity: 0; 
-        visibility: hidden;
-        transition: var(--transition-menu-mobile); 
-        z-index: 999; 
-        max-height: calc(100vh - var(--navbar-height)); 
-        overflow-y: auto; 
+        margin: 0;
     }
 
     body.dark-mode .navbar-main {
-        background-color: rgba(var(--card-bg-color-rgb-dark), 0.88); 
+        background-color: rgba(var(--card-bg-color-rgb-dark), 0.9); /* Sedikit lebih opaque untuk dark mode */
     }
 
     .navbar-main.open { 
@@ -530,21 +532,26 @@ body.dark-mode .footer-bottom {
         flex-direction: column; 
         width: 100%; 
         align-items: stretch; 
+        padding: 0; 
+        margin: 0;
     }
 
     .navbar-nav li { 
-        margin: 0; 
-        width: 100%; 
         opacity: 0; 
-        transform: translateX(-20px); 
-        animation: fadeInMenuItem 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards; 
+        transform: translateY(-10px); /* Item menu slide sedikit dari atas */
+        animation: slideFadeIn 0.3s ease-out forwards; 
+        margin: 0; /* Pastikan margin reset */
+        padding: 0; /* Pastikan padding reset */
     }
-    .navbar-nav li:nth-child(1) { animation-delay: 0.1s; }
-    .navbar-nav li:nth-child(2) { animation-delay: 0.15s; }
-    .navbar-nav li:nth-child(3) { animation-delay: 0.2s; }
-    .navbar-nav li:nth-child(4) { animation-delay: 0.25s; }
-    .navbar-nav li:nth-child(5) { animation-delay: 0.3s; }
-    .navbar-nav li:nth-child(6) { animation-delay: 0.35s; }
+    /* Pengaturan delay untuk efek bertahap */
+    .navbar-main.open .navbar-nav li:nth-child(1) { animation-delay: 0.1s; }
+    .navbar-main.open .navbar-nav li:nth-child(2) { animation-delay: 0.15s; }
+    .navbar-main.open .navbar-nav li:nth-child(3) { animation-delay: 0.2s; }
+    .navbar-main.open .navbar-nav li:nth-child(4) { animation-delay: 0.25s; }
+    .navbar-main.open .navbar-nav li:nth-child(5) { animation-delay: 0.3s; }
+    .navbar-main.open .navbar-nav li:nth-child(6) { animation-delay: 0.35s; }
+    .navbar-main.open .navbar-nav li:nth-child(7) { animation-delay: 0.4s; }
+    /* Tambahkan delay sesuai jumlah item menu kamu jika ada lebih dari 7 */
 
 
     .navbar-nav .nav-link { 
@@ -553,7 +560,7 @@ body.dark-mode .footer-bottom {
         border-bottom: 1px solid var(--border-color); 
         font-size: 1rem; 
         display: block; 
-        transition: background-color 0.2s ease, color 0.2s ease; 
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Efek transisi yang lebih terasa */
     }
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active { 
@@ -568,21 +575,17 @@ body.dark-mode .footer-bottom {
     }
     
     .navbar-actions { 
-        margin-left: auto; 
-        padding-right: 0.5rem; 
-    }
-    .navbar-main.open .navbar-actions { 
-        margin: 0; 
         padding: 1rem 1.5rem; 
-        border-bottom: 1px solid var(--border-color);
-        width: 100%;
         display: flex;
-        justify-content: flex-start; 
-        animation: fadeInMenuItem 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.4s forwards; 
-        opacity: 0; 
-        transform: translateX(-20px); 
+        justify-content: flex-end; /* Pindahkan toggle ke kanan */
+        border-bottom: 1px solid var(--border-color);
+        width: 100%; /* Pastikan mengisi lebar penuh */
+        opacity: 0;
+        transform: translateY(-10px); /* Animasi sama dengan item menu */
+        animation: slideFadeIn 0.3s ease-out forwards;
+        animation-delay: 0.45s; /* Delay setelah item menu terakhir */
     }
-    .navbar-main.open #darkModeToggle {
+    .navbar-actions #darkModeToggle {
         margin-left: 0; 
     }
 
@@ -590,12 +593,14 @@ body.dark-mode .footer-bottom {
         display: flex; 
         align-items: center;
         justify-content: center;
+        transition: transform 0.3s ease-in-out; /* Transisi untuk rotasi */
     }
 
-    @keyframes fadeInMenuItem {
+    /* Keyframes untuk animasi fade-in dan slide-in item menu */
+    @keyframes slideFadeIn {
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
     }
 
@@ -624,7 +629,7 @@ body.dark-mode .footer-bottom {
     }
     .project-preview-item img {
         max-width: 100%; /* Biarkan gambar mengisi lebar item di mobile */
-                         /* Jika itemnya sendiri sudah dibatasi oleh grid, ini akan aman */
+                              /* Jika itemnya sendiri sudah dibatasi oleh grid, ini akan aman */
     }
 }
 
@@ -647,7 +652,7 @@ body.dark-mode .footer-bottom {
     .hero-cta { padding: 0.8rem 1.8rem; font-size: 0.95rem; }
     .hero-visual-placeholder { width: 75%; }
     .hero-visual-placeholder img {
-         max-width: 100%; /* Pastikan tetap responsif */
+           max-width: 100%; /* Pastikan tetap responsif */
     }
 
 
@@ -673,7 +678,7 @@ body.dark-mode .footer-bottom {
     /* Penyesuaian untuk project preview grid di mobile sangat kecil */
     .project-preview-item img {
         max-width: 220px; /* Sedikit lebih besar dari sebelumnya, tapi tetap terkontrol */
-                          /* Atau biarkan 100% jika itemnya sudah cukup sempit */
+                              /* Atau biarkan 100% jika itemnya sudah cukup sempit */
     }
     .our-projects-highlight h3 {
         font-size: 1.8rem;

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('dark-mode');
             localStorage.setItem('darkMode', 'disabled');
         }
-         // Re-initialize AOS after theme change to re-calculate offsets if needed
+          // Re-initialize AOS after theme change to re-calculate offsets if needed
         if (typeof AOS !== 'undefined') {
             AOS.refreshHard();
         }
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // === EFEK MENGETIK UNTUK HERO SECTION ===
+    // === EFEK MENGETIK UNTASUK HERO SECTION ===
     const typingElement = document.getElementById('typing-effect');
     const wordsToType = ["Keadilan.", "Peluang Sama.", "Kemajuan Bersama."];
     let wordIndex = 0;
@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerMenu.addEventListener('click', (e) => {
             e.stopPropagation(); // Hindari penutupan langsung jika klik di luar
             navbarMain.classList.toggle('open');
+            hamburgerMenu.classList.toggle('active'); // Tambahkan/hapus kelas 'active' pada hamburger
             // Aria-expanded untuk aksesibilitas
             const isOpen = navbarMain.classList.contains('open');
             hamburgerMenu.setAttribute('aria-expanded', isOpen.toString());
@@ -107,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 if (navbarMain.classList.contains('open')) {
                     navbarMain.classList.remove('open');
+                    hamburgerMenu.classList.remove('active'); // Hapus kelas 'active' pada hamburger
                     hamburgerMenu.setAttribute('aria-expanded', 'false');
                 }
             });
@@ -116,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', (e) => {
             if (navbarMain.classList.contains('open') && !navbarMain.contains(e.target) && !hamburgerMenu.contains(e.target)) {
                 navbarMain.classList.remove('open');
+                hamburgerMenu.classList.remove('active'); // Hapus kelas 'active' pada hamburger
                 hamburgerMenu.setAttribute('aria-expanded', 'false');
             }
         });
@@ -139,13 +142,28 @@ document.addEventListener('DOMContentLoaded', () => {
         let activeLinkFound = false;
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
+            // Cek apakah link adalah link absolut ke proyek.html atau link scroll ke id di index.html
+            const href = link.getAttribute('href');
+            if (href.startsWith('index.html#') && currentSectionId) {
+                // Jika ini link ke index.html dan ada sectionId yang cocok
+                if (href === `index.html#${currentSectionId}`) {
+                    link.classList.add('active');
+                    activeLinkFound = true;
+                }
+            } else if (href.startsWith('#') && currentSectionId) {
+                // Jika ini link internal di halaman yang sama
+                if (href === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                    activeLinkFound = true;
+                }
+            } else if (href === 'proyek.html' && window.location.pathname.includes('proyek.html')) {
+                // Jika ini link ke proyek.html dan kita sedang di halaman proyek.html
                 link.classList.add('active');
                 activeLinkFound = true;
             }
         });
-        // Jika scroll di paling atas, aktifkan link Beranda
-        if (!activeLinkFound && window.pageYOffset < sections[0].offsetTop - navbarHeight - 50) {
+        // Jika scroll di paling atas halaman utama, aktifkan link Beranda
+        if (!activeLinkFound && window.location.pathname.includes('index.html') && window.pageYOffset < sections[0].offsetTop - navbarHeight - 50) {
             const homeLink = document.querySelector('.navbar-nav a[href="#hero"]');
             if (homeLink) homeLink.classList.add('active');
         }
@@ -163,10 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const isActive = item.classList.contains('active');
             // Tutup semua item lain jika hanya satu yang boleh terbuka (opsional)
             // accordionItems.forEach(otherItem => {
-            //     if (otherItem !== item) {
-            //         otherItem.classList.remove('active');
-            //         otherItem.querySelector('.accordion-content').style.maxHeight = null;
-            //     }
+            //      if (otherItem !== item) {
+            //          otherItem.classList.remove('active');
+            //          otherItem.querySelector('.accordion-content').style.maxHeight = null;
+            //      }
             // });
 
             item.classList.toggle('active');
