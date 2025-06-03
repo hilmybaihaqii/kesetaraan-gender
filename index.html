@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetaraKita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header class="main-header">
+        <div class="container navbar-container">
+            <a href="#hero" class="navbar-logo" data-aos="fade-down" data-aos-delay="100">
+                <img src="assets/1 bg.png" alt="Logo SetaraKita">
+            </a>
+            <nav class="navbar-main" data-aos="fade-down" data-aos-delay="200">
+                <ul class="navbar-nav">
+                    <li><a href="#hero" class="nav-link active">Beranda</a></li>
+                    <li><a href="#pentingnya" class="nav-link">Mengapa Penting?</a></li>
+                    <li><a href="#mitosfakta" class="nav-link">Mitos vs Fakta</a></li>
+                    <li><a href="#dampak" class="nav-link">Dampak Nyata</a></li>
+                    <li><a href="#aksi" class="nav-link">Yuk, Beraksi!</a></li>
+                    <li><a href="proyek.html" class="nav-link">Proyek Kami</a></li>
+                    <li><a href="#kontak" class="nav-link">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-actions" data-aos="fade-down" data-aos-delay="300">
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.836 17.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18.75a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM5.106 17.836a.75.75 0 001.06 1.06l1.591-1.59a.75.75 0 00-1.06-1.061l-1.591 1.59zM6.25 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016.25 12zM6.106 5.106a.75.75 0 00-1.06 1.06l1.591 1.59a.75.75 0 001.06-1.061L5.106 5.106z"/></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-3.51 1.713-6.625 4.332-8.518a.75.75 0 01.819.162z" clip-rule="evenodd" /></svg>
+                </button>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="hamburger-bar hamburger-bar-top"></span>
+                <span class="hamburger-bar hamburger-bar-middle"></span>
+                <span class="hamburger-bar hamburger-bar-bottom"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <section id="hero" class="hero-section-revised">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content-container">
+                <div class="hero-text-content">
+                    <h1 data-aos="fade-up" data-aos-delay="300">Suara Setara, <span class="highlight-text">Dunia Berdaya</span><span id="typing-effect-container">Untuk <span id="typing-effect"></span></span></h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">Mari kita dobrak batasan, wujudkan kesetaraan gender di setiap lini kehidupan. Karena potensi sejati tak kenal diskriminasi.</p>
+                    <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="700">
+                        <a href="#pentingnya" class="cta-button hero-cta primary-cta">Pelajari Lebih Lanjut</a>
+                        <a href="#aksi" class="cta-button hero-cta secondary-cta">Ikut Beraksi!</a>
+                    </div>
+                </div>
+                <div class="hero-visual-placeholder" data-aos="zoom-in-up" data-aos-delay="400">
+                    <img src="assets/2 bg.png" alt="Ilustrasi kolaborasi profesional">
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content-wrapper">
+            <section id="pentingnya" class="content-section">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up">
+                        <span class="section-tagline">Fondasi Kemajuan</span>
+                        <h2>Mengapa Kesetaraan Gender Begitu Fundamental?</h2>
+                        <p class="section-subtitle">Ini bukan cuma soal hak, tapi soal membuka potensi penuh untuk masyarakat yang lebih adil, inovatif, dan sejahtera.</p>
+                    </div>
+
+                    <div class="grid-layout-3col">
+                        <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="info-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.324h5.388a.563.563 0 01.327.908l-4.286 3.118a.563.563 0 00-.172.531l1.618 4.83a.563.563 0 01-.78.622l-4.286-3.118a.563.563 0 00-.652 0l-4.286 3.118a.563.563 0 01-.78-.622l1.618-4.83a.563.563 0 00-.172-.531l-4.286-3.118a.563.563 0 01.327-.908h5.388a.563.563 0 00.475-.324L11.48 3.5z" /></svg>
+                            </div>
+                            <h3>Keadilan & HAM</h3>
+                            <p>Setiap individu, apapun gendernya, berhak atas kesempatan, perlakuan, dan penghargaan yang sama. Ini adalah prinsip dasar hak asasi manusia.</p>
+                        </div>
+                        <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="info-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                            </div>
+                            <h3>Pertumbuhan Ekonomi</h3>
+                            <p>Memberdayakan seluruh gender berarti menggali potensi SDM secara maksimal, mendorong inovasi, produktivitas, dan pertumbuhan ekonomi yang berkelanjutan.</p>
+                        </div>
+                        <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="info-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M12 12.75a3 3 0 110-6 3 3 0 010 6z" /></svg>
+                            </div>
+                            <h3>Masyarakat Harmonis</h3>
+                            <p>Kesetaraan mengurangi diskriminasi dan ketegangan sosial, menciptakan lingkungan yang lebih inklusif, aman, dan harmonis bagi semua anggota masyarakat.</p>
+                        </div>
+                    </div>
+                    <div class="content-deep-dive" data-aos="fade-up">
+                        <h4>Lebih Dalam Lagi:</h4>
+                        <p>Studi global menunjukkan bahwa negara dengan tingkat kesetaraan gender yang tinggi cenderung memiliki tingkat kebahagiaan penduduk yang lebih baik, korupsi yang lebih rendah, dan tata kelola pemerintahan yang lebih efektif. Ketika perempuan mendapatkan akses yang sama dalam pendidikan, kesehatan, ekonomi, dan politik, seluruh komunitas merasakan dampaknya. Ini bukan hanya tentang "memperbaiki" posisi perempuan, tetapi tentang "memperbaiki" sistem agar semua orang bisa berkontribusi dan meraih potensi terbaiknya.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mitosfakta" class="content-section alt-bg">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up">
+                        <span class="section-tagline">Luruskan Persepsi</span>
+                        <h2>Gaji & Kesempatan: Bongkar Mitos, Pahami Fakta!</h2>
+                        <p class="section-subtitle">Banyak asumsi usang yang masih menghambat kesetaraan di tempat kerja. Saatnya kita bedah satu per satu.</p>
+                    </div>
+                    <div class="mitosfakta-accordion">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>MITOS: Wanita secara alami kurang ambisius dalam karir.</span>
+                                <span class="accordion-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content">
+                                <p><strong>FAKTA:</strong> Ambisi tidak ditentukan oleh gender. Banyak studi menunjukkan wanita sama ambisiusnya dengan pria, namun seringkali menghadapi lebih banyak hambatan struktural dan sosial, seperti kurangnya role model, bias dalam promosi, dan beban ganda urusan domestik.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>MITOS: Memberi gaji sama akan merugikan perusahaan karena wanita lebih sering cuti.</span>
+                                <span class="accordion-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content">
+                                <p><strong>FAKTA:</strong> Cuti hamil dan melahirkan adalah hak yang dilindungi dan investasi jangka panjang bagi masyarakat. Perusahaan yang suportif justru mendapatkan loyalitas dan produktivitas lebih tinggi. Selain itu, banyak pria juga mengambil cuti parental. Fokus seharusnya pada kontribusi dan kinerja, bukan asumsi berbasis gender.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>MITOS: Pekerjaan teknis atau kepemimpinan lebih cocok untuk pria.</span>
+                                <span class="accordion-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content">
+                                <p><strong>FAKTA:</strong> Kemampuan dan kompetensi tidak terikat gender. Stereotip ini membatasi talenta dan merugikan inovasi. Dengan kesempatan yang sama, wanita terbukti mampu berprestasi di semua bidang, termasuk STEM (Science, Technology, Engineering, Mathematics) dan posisi kepemimpinan puncak.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>MITOS: Wanita tidak negosiasi gaji se-agresif pria, jadi wajar gajinya lebih rendah.</span>
+                                <span class="accordion-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content">
+                                <p><strong>FAKTA:</strong> Ada bias sistemik. Wanita yang negosiasi seringkali dianggap "terlalu agresif" atau "tidak menyenangkan", sementara perilaku yang sama pada pria dianggap wajar. Sistem penggajian yang transparan dan adil lebih penting daripada mengandalkan kemampuan negosiasi individu yang dipengaruhi bias gender.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dampak" class="content-section">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up">
+                        <span class="section-tagline">Konsekuensi Nyata</span>
+                        <h2>Efek Domino Ketidaksetaraan: Bukan Isu Sepele!</h2>
+                        <p class="section-subtitle">Ketidakadilan gender, terutama dalam hal ekonomi, memiliki dampak berantai yang merugikan individu, keluarga, hingga negara.</p>
+                    </div>
+                    <div class="grid-layout-2col-uneven">
+                        <div class="dampak-text-content" data-aos="fade-right">
+                            <h3>Lingkaran Setan Kemiskinan</h3>
+                            <p>Wanita, terutama ibu tunggal, yang menerima upah lebih rendah padahal memiliki tanggung jawab dan kualifikasi yang sama, berisiko lebih besar terjerat kemiskinan. Ini berdampak langsung pada kesejahteraan dan masa depan anak-anak mereka.</p>
+                            <h3>Hilangnya Potensi Ekonomi</h3>
+                            <p>Ketika separuh populasi tidak mendapatkan kesempatan yang sama untuk berkontribusi secara ekonomi, negara kehilangan potensi pendapatan, inovasi, dan pertumbuhan PDB yang signifikan. Kesenjangan upah gender global diperkirakan merugikan ekonomi triliunan dolar setiap tahun.</p>
+                            <h3>Kesehatan Mental & Kesejahteraan</h3>
+                            <p>Diskriminasi dan ketidakadilan dapat memicu stres, kecemasan, dan masalah kesehatan mental lainnya. Lingkungan kerja yang tidak setara juga menurunkan motivasi dan kepuasan kerja secara umum.</p>
+                        </div>
+                        <div class="dampak-visual-content" data-aos="fade-left" data-aos-delay="150">
+                            <img src="assets/stats.png" alt="dampak ketidaksetaraan gender">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aksi" class="content-section alt-bg">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up">
+                        <span class="section-tagline">Saatnya Bergerak</span>
+                        <h2>#KitaBisaApa: Jadi Agen Perubahan Itu Keren!</h2>
+                        <p class="section-subtitle">Perubahan dimulai dari diri sendiri dan tindakan nyata, sekecil apapun. Bersama, kita bisa ciptakan gelombang kesetaraan.</p>
+                    </div>
+                    <div class="grid-layout-4col">
+                        <div class="action-card" data-aos="zoom-in-up" data-aos-delay="100">
+                            <h4>Edukasi Diri & Sekitar</h4>
+                            <p>Pelajari isu kesetaraan, bagikan informasi valid, dan buka diskusi sehat di lingkunganmu.</p>
+                        </div>
+                        <div class="action-card" data-aos="zoom-in-up" data-aos-delay="200">
+                            <h4>Tantang Stereotip</h4>
+                            <p>Berani suarakan dan pertanyakan stereotip gender yang membatasi, baik dalam percakapan maupun di media sosial.</p>
+                        </div>
+                        <div class="action-card" data-aos="zoom-in-up" data-aos-delay="300">
+                            <h4>Dukung Kebijakan Adil</h4>
+                            <p>Pilih dan dukung pemimpin atau organisasi yang pro-kesetaraan dan mendorong kebijakan inklusif.</p>
+                        </div>
+                        <div class="action-card" data-aos="zoom-in-up" data-aos-delay="400">
+                            <h4>Jadi Mentor & Teman yang Baik</h4>
+                            <p>Bagi yang memiliki privilese, jadilah mentor atau teman bagi mereka yang menghadapi diskriminasi.</p>
+                        </div>
+                    </div>
+
+                    <div class="our-projects-highlight" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="text-center">Lihat Inisiatif Kami!</h3>
+                        <p class="text-center section-subtitle" style="margin-bottom: 2.5rem;">Kami aktif mengkampanyekan kesetaraan gender melalui berbagai proyek kreatif dan edukatif. Berikut beberapa di antaranya:</p>
+                        
+                        <div class="project-preview-grid">
+                            <div class="project-preview-item">
+                                <img src="assets/poster 1.jpg" alt="Proyek From Gamer to Leader">
+                                <h4>From Gamer to Leader</h4>
+                                <p>Mengupas bagaimana perempuan dapat memimpin dan berinovasi dalam industri e-sport, menciptakan ekonomi yang lebih inklusif.</p>
+                            </div>
+                            <div class="project-preview-item">
+                                <img src="assets/poster 2.jpg" alt="Proyek Mengapa Ini Penting">
+                                <h4>Pentingnya Kesetaraan di E-Sport</h4>
+                                <p>Menjelaskan dampak positif kesetaraan gender dalam memperkaya industri e-sport dan membuka peluang tanpa batas.</p>
+                            </div>
+                            <div class="project-preview-item">
+                                <img src="assets/poster 3.jpg" alt="Proyek Langkah Nyata">
+                                <h4>Langkah Nyata Kesetaraan</h4>
+                                <p>Mengajak untuk membentuk komunitas, melakukan penyuluhan, dan mempromosikan kesetaraan gender melalui diskusi.</p>
+                            </div>
+                        </div>
+                        <div class="text-center" style="margin-top: 2rem;">
+                            <a href="proyek.html" class="cta-button primary-cta">Lihat Semua Proyek</a>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 3rem;" data-aos="fade-up"> <a href="#kontak" class="cta-button primary-cta large-cta">Punya Ide Lain? Bagikan!</a>
+                    </div>
+                </div>
+            </section>
+            <section id="kontak" class="content-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tagline">Terhubung Dengan Kami</span>
+            <h2>Ada Ide, Pertanyaan, atau Mau Kolaborasi?</h2>
+            <p class="section-subtitle">Kami sangat antusias mendengar darimu! Mari bersama-sama membangun gerakan kesetaraan yang lebih besar.</p>
+        </div>
+        
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdkzobkk" method="POST" data-aos="fade-up" data-aos-delay="100">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Nama kamu..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="_replyto" placeholder="Email kamu..." required> 
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subjek Pesan</label>
+                <input type="text" id="subject" name="subject" placeholder="Tentang apa pesanmu?" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Isi Pesan</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tulis pesanmu di sini..." required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="cta-button primary-cta large-cta">Kirim Pesan Sekarang</button>
+            </div>
+        </form>
+        </div>
+</section>
+        </div>
+    </main>
+
+    <footer class="main-footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="assets/1 bg.png" alt="Logo SetaraKita di Footer" class="footer-logo">
+                    <p>Mendorong kesadaran dan aksi nyata untuk kesetaraan gender di Indonesia. Karena setiap suara berharga.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Beranda</a></li>
+                        <li><a href="#pentingnya">Mengapa Penting?</a></li>
+                        <li><a href="proyek.html">Proyek Kami</a></li> 
+                        <li><a href="#aksi">Yuk, Beraksi!</a></li>
+                        <li><a href="#mitosfakta">Mitos vs Fakta</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us!</h4>
+                    <a href="https://www.instagram.com/hilmybaihaaqi_/" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="https://x.com/Hilmyy517500" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="https://www.facebook.com/share/14FYcapty5/?mibextid=wwXIfr" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> SetaraKita. Dibuat dengan semangat kesetaraan. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
