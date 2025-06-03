@@ -47,29 +47,16 @@ SetaraKita adalah platform informatif dan interaktif yang dirancang untuk:
 ## Struktur File Proyek (Utama)
 
 
-.
-├── assets/
-│   ├── 1 bg.png         // Logo
-│   ├── 2 bg.png         // Gambar hero
-│   └── stats.png        // Gambar untuk bagian dampak
-│   └── poster 1.jpg     // Gambar proyek 1
-│   └── poster 2.jpg     // Gambar proyek 2
-│   └── poster 3.jpg     // Gambar proyek 3
-├── index.html           // Halaman utama
-├── proyek.html          // Halaman daftar proyek (saat ini "Segera Hadir")
-├── style.css            // File styling utama
-└── script.js            // File JavaScript utama
-
 
 ## Cara Menjalankan Secara Lokal
 
-1.  **Clone repositori ini (jika sudah di GitHub):**
+1.  **Clone repositori ini :
     ```bash
-    git clone [https://github.com/USERNAME/NAMA-REPOSITORI.git](https://github.com/USERNAME/NAMA-REPOSITORI.git)
-    cd NAMA-REPOSITORI
+    https://github.com/hilmybaihaqii/kesetaraan-gender/
+    cd kesetaraan-gender
     ```
     Atau, jika Anda memiliki file secara lokal, cukup buka folder proyek.
-2.  **Buka `index.html` di browser:**
+3.  **Buka `index.html` di browser:**
     * Cara termudah adalah dengan menggunakan ekstensi "Live Server" di Visual Studio Code. Klik kanan pada file `index.html` dan pilih "Open with Live Server".
     * Atau, Anda bisa langsung membuka file `index.html` di browser pilihan Anda.
 
@@ -83,8 +70,6 @@ Website ini adalah situs statis dan dapat di-deploy dengan mudah ke berbagai pla
 
 Formulir kontak pada halaman `index.html` menggunakan endpoint dari **Formspree**. Pastikan Anda telah mengkonfigurasi akun Formspree Anda dan mengganti URL `action` pada formulir dengan endpoint yang benar.
 
-**URL Website (jika sudah di-deploy):**
-[Sisipkan URL website Anda di sini setelah deploy]
 
 ## Status Proyek
 
