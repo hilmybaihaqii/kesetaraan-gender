@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 700, // Durasi animasi sedikit lebih cepat
-            once: true,
+            once: false,
             offset: 100, // Trigger sedikit lebih awal
             // disable: 'mobile' // Pertimbangkan untuk aktifkan di mobile jika performa baik
         });
